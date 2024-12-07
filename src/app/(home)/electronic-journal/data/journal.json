@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Dr. Ana Crist",
+    "first": 5,
+    "second": 4,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Aubrey Miller",
+    "first": 4,
+    "second": 3,
+    "third": 5,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Tricia Price MD",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Patrick Reilly",
+    "first": 4,
+    "second": 4,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Wallace Lakin",
+    "first": 5,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 5
+  },
+  {
+    "name": "Ella Parisian",
+    "first": 3,
+    "second": 5,
+    "third": 3,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Geraldine Dach",
+    "first": 4,
+    "second": 5,
+    "third": 4,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Anne Gusikowski IV",
+    "first": 4,
+    "second": 3,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Toni Bogan",
+    "first": 5,
+    "second": 3,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Dr. Howard Wisozk",
+    "first": 4,
+    "second": 4,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Carole Pollich",
+    "first": 5,
+    "second": 5,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Brenda Will",
+    "first": 3,
+    "second": 3,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Cesar Tremblay IV",
+    "first": 5,
+    "second": 3,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Charles Williamson",
+    "first": 4,
+    "second": 5,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Edgar Schiller",
+    "first": 5,
+    "second": 3,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Greg Zboncak",
+    "first": 5,
+    "second": 3,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Ebony Beatty",
+    "first": 5,
+    "second": 5,
+    "third": 5,
+    "fourty": 3,
+    "annual": 5
+  },
+  {
+    "name": "Billie Mante",
+    "first": 4,
+    "second": 5,
+    "third": 5,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Pam Bernier",
+    "first": 3,
+    "second": 5,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Duane Schumm",
+    "first": 3,
+    "second": 4,
+    "third": 5,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Johanna Buckridge",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Doug Weber",
+    "first": 3,
+    "second": 3,
+    "third": 4,
+    "fourty": 3,
+    "annual": 3
+  },
+  {
+    "name": "Tricia Borer",
+    "first": 3,
+    "second": 3,
+    "third": 3,
+    "fourty": 4,
+    "annual": 3
+  },
+  {
+    "name": "Derek Renner-Weissnat",
+    "first": 3,
+    "second": 4,
+    "third": 4,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Miss Angie Miller II",
+    "first": 4,
+    "second": 5,
+    "third": 5,
+    "fourty": 4,
+    "annual": 5
+  },
+  {
+    "name": "Gregory D'Amore",
+    "first": 4,
+    "second": 3,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Edward Schmidt",
+    "first": 5,
+    "second": 3,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Rex Smith",
+    "first": 5,
+    "second": 5,
+    "third": 3,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Merle Breitenberg",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Grace Friesen",
+    "first": 4,
+    "second": 3,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Darlene Bruen-Wolf",
+    "first": 3,
+    "second": 3,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Nina Smitham DDS",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Michele O'Connell",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Wallace Botsford IV",
+    "first": 5,
+    "second": 3,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Damon Wehner",
+    "first": 4,
+    "second": 5,
+    "third": 4,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Dr. Martha Rolfson",
+    "first": 4,
+    "second": 4,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Kristie Rau",
+    "first": 3,
+    "second": 4,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Dr. Madeline Abshire",
+    "first": 5,
+    "second": 3,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Andy Powlowski",
+    "first": 5,
+    "second": 4,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Laurie Beahan",
+    "first": 5,
+    "second": 5,
+    "third": 5,
+    "fourty": 3,
+    "annual": 5
+  },
+  {
+    "name": "Bryan McClure DVM",
+    "first": 5,
+    "second": 3,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Dr. Kristopher Ruecker I",
+    "first": 5,
+    "second": 5,
+    "third": 4,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Kevin Kuhic",
+    "first": 4,
+    "second": 3,
+    "third": 3,
+    "fourty": 3,
+    "annual": 3
+  },
+  {
+    "name": "Angel Bogan",
+    "first": 5,
+    "second": 5,
+    "third": 4,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Nick Walsh",
+    "first": 4,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Mae Cartwright III",
+    "first": 3,
+    "second": 3,
+    "third": 3,
+    "fourty": 3,
+    "annual": 3
+  },
+  {
+    "name": "Kelley Torp",
+    "first": 5,
+    "second": 3,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Cameron Walsh",
+    "first": 3,
+    "second": 3,
+    "third": 3,
+    "fourty": 3,
+    "annual": 3
+  },
+  {
+    "name": "Antoinette Orn Sr.",
+    "first": 4,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Judith Heller",
+    "first": 3,
+    "second": 5,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Pauline Jerde",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Jake White",
+    "first": 4,
+    "second": 5,
+    "third": 5,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Nadine Krajcik III",
+    "first": 3,
+    "second": 5,
+    "third": 4,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Latoya Quitzon",
+    "first": 5,
+    "second": 4,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Lorena Hagenes",
+    "first": 3,
+    "second": 5,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Alfredo Hammes",
+    "first": 3,
+    "second": 3,
+    "third": 4,
+    "fourty": 3,
+    "annual": 3
+  },
+  {
+    "name": "Lucille Hagenes",
+    "first": 4,
+    "second": 3,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Marcus Muller MD",
+    "first": 3,
+    "second": 3,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Kayla Block",
+    "first": 3,
+    "second": 5,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Dr. Elsie Balistreri-Kihn",
+    "first": 3,
+    "second": 3,
+    "third": 3,
+    "fourty": 3,
+    "annual": 3
+  },
+  {
+    "name": "Vivian Gibson",
+    "first": 4,
+    "second": 3,
+    "third": 4,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Elaine Willms",
+    "first": 3,
+    "second": 5,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Meredith Wilkinson",
+    "first": 5,
+    "second": 5,
+    "third": 5,
+    "fourty": 3,
+    "annual": 5
+  },
+  {
+    "name": "Amos Heathcote",
+    "first": 4,
+    "second": 4,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Salvador Gutmann",
+    "first": 4,
+    "second": 3,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Ted Bayer",
+    "first": 5,
+    "second": 5,
+    "third": 4,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Alfonso Gutmann",
+    "first": 5,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 5
+  },
+  {
+    "name": "Alicia Greenholt",
+    "first": 4,
+    "second": 4,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Carl Stoltenberg",
+    "first": 4,
+    "second": 5,
+    "third": 5,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Claire Harber",
+    "first": 4,
+    "second": 5,
+    "third": 5,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Andrea Weimann",
+    "first": 5,
+    "second": 3,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Shaun Altenwerth",
+    "first": 3,
+    "second": 5,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Catherine Bradtke",
+    "first": 3,
+    "second": 4,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Everett Fadel",
+    "first": 3,
+    "second": 4,
+    "third": 3,
+    "fourty": 3,
+    "annual": 3
+  },
+  {
+    "name": "Sheldon Heidenreich III",
+    "first": 4,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Darrin Hegmann",
+    "first": 3,
+    "second": 3,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Jan Reichert",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "George Aufderhar",
+    "first": 4,
+    "second": 3,
+    "third": 3,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Mr. Cecil Borer",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Jodi Haley",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Guillermo Harris",
+    "first": 4,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Dominic Quitzon",
+    "first": 3,
+    "second": 3,
+    "third": 5,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Manuel Boyer",
+    "first": 3,
+    "second": 3,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Saul Torp",
+    "first": 3,
+    "second": 4,
+    "third": 3,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Georgia Pfeffer",
+    "first": 5,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 5
+  },
+  {
+    "name": "Lucia Ziemann",
+    "first": 5,
+    "second": 3,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Stacy Schroeder",
+    "first": 4,
+    "second": 3,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Eunice Gislason",
+    "first": 3,
+    "second": 4,
+    "third": 3,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Angel Lockman",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Rachael Cummerata MD",
+    "first": 5,
+    "second": 5,
+    "third": 5,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Arnold Kuphal",
+    "first": 5,
+    "second": 4,
+    "third": 5,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Sheri Barrows",
+    "first": 5,
+    "second": 3,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Isabel Hudson",
+    "first": 4,
+    "second": 3,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Dr. Casey Ziemann",
+    "first": 3,
+    "second": 4,
+    "third": 5,
+    "fourty": 5,
+    "annual": 4
+  },
+  {
+    "name": "Lance Mante",
+    "first": 4,
+    "second": 5,
+    "third": 4,
+    "fourty": 5,
+    "annual": 5
+  },
+  {
+    "name": "Charlotte McLaughlin",
+    "first": 3,
+    "second": 5,
+    "third": 5,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Sonia Predovic V",
+    "first": 3,
+    "second": 5,
+    "third": 4,
+    "fourty": 4,
+    "annual": 4
+  },
+  {
+    "name": "Jim Legros",
+    "first": 4,
+    "second": 4,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Lucia Ernser",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  },
+  {
+    "name": "Rickey Bechtelar",
+    "first": 4,
+    "second": 5,
+    "third": 3,
+    "fourty": 3,
+    "annual": 4
+  }
+]
