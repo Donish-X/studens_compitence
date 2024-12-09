@@ -1,26 +1,54 @@
-import { promises as fs } from "fs"
-import path from "path"
-import { DataTable } from "./components/data-table";
-// import { generate } from "./data/seed";
+'use client';
 
-async function getData() {
-    const data = await fs.readFile(
-        path.join(process.cwd(), "/src/app/(home)/list-students/data/list.json")
-    )
+import { useEffect, useState } from 'react';
+import { repository } from '@/lib/api'; // Импортировать repository, где находится getStudents
+import { DataTable } from './components/data-table'; // Ваш компонент таблицы
 
-    const tasks = JSON.parse(data.toString())
+export default function Page() {
+  const [data, setData] = useState<any[]>([]); // Состояние для хранения данных
+  const [loading, setLoading] = useState<boolean>(true); // Состояние загрузки
+  const [error, setError] = useState<string | null>(null); // Состояние для ошибок
 
-    return tasks;
-}
+  useEffect(() => {
+    // Функция для получения данных с API
+    const fetchData = async () => {
+      try {
+        // Используем метод getStudents из repository для получения студентов
+        const students = await repository().getStudents();
 
-export default async function Page() {
-    // generate();
+        // Обработка данных, извлекаем нужные поля
+        const formattedStudents = students.map((student: any) => ({
+          full_name: student.full_name, // Извлекаем full_name
+          group_name: student.group_name, // Извлекаем group_name
+        }));
 
-    const data = await getData();
+        setData(formattedStudents); // Устанавливаем данные в состояние
+      } catch (err) {
+        console.error('Ошибка при получении данных:', err);
+        setError('Не удалось загрузить данные');
+      } finally {
+        setLoading(false); // После загрузки отключаем индикатор загрузки
+      }
+    };
 
-    return (
-        <div className="container px-10 pt-10">
-            <DataTable data={data} />
-        </div>
-    );
+    fetchData();
+  }, []); // Пустой массив зависимостей, чтобы запрос выполнялся только один раз при монтировании компонента
+
+  if (loading) {
+    return <div>Загрузка...</div>; // Показать индикатор загрузки
+  }
+
+  if (error) {
+    return <div>{error}</div>; // Показать ошибку, если она есть
+  }
+
+  if (data.length === 0) {
+    return <div>Нет данных для отображения.</div>; // Сообщение, если данных нет
+  }
+
+  return (
+    <div className='container px-10 pt-10'>
+      <DataTable data={data} /> {/* Передаем данные в таблицу */}
+    </div>
+  );
 }

@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       // Basic redirect
       {
         source: '/',
-        destination: '/electronic-journal',
+        destination: '/general',
         permanent: true,
       },
     ];
