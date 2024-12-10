@@ -192,17 +192,21 @@ export default function Page() {
           Подтвердить ответы
         </Button>
       )}
-
       {/* Модальное окно с сертификатом */}
+      /*{' '}
       <Modal isOpen={modalVisible} onClose={() => setModalVisible(false)}>
-        <div className='bg-white w-[90rem] max-w-full min-h-[70vh] p-6 rounded-lg overflow-hidden relative'>
+        <div className='bg-white w-[90rem] max-w-full min-h-[70vh] p-6 rounded-lg relative overflow-hidden'>
           <button
             className='absolute top-4 right-4 text-xl font-bold text-gray-500'
             onClick={() => setModalVisible(false)}
           >
             X
           </button>
-          <div className='text-center' ref={certificateRef}>
+          <div
+            className='text-center overflow-y-auto'
+            style={{ maxHeight: 'calc(70vh - 80px)' }}
+            ref={certificateRef}
+          >
             {certificateData ? (
               <Certificate
                 studentName={certificateData.studentName}

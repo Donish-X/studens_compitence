@@ -30,7 +30,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { columns } from './columns'; // Импортировать колонки
+import { columns } from './columns';
 
 interface DataTableProps {
   data: any[]; // Ожидаемый формат данных
