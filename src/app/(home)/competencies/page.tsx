@@ -63,7 +63,7 @@ export default function Page() {
 
     async function fetchStudentId() {
       const response = await useRepository.getUser(); // Предполагается метод в API
-      setStudentId(response.id);
+      setStudentId(response.student);
     }
 
     fetchQuestions();
@@ -192,8 +192,7 @@ export default function Page() {
           Подтвердить ответы
         </Button>
       )}
-      {/* Модальное окно с сертификатом */}
-      /*{' '}
+
       <Modal isOpen={modalVisible} onClose={() => setModalVisible(false)}>
         <div className='bg-white w-[90rem] max-w-full min-h-[70vh] p-6 rounded-lg relative overflow-hidden'>
           <button
@@ -219,7 +218,6 @@ export default function Page() {
             )}
           </div>
 
-          {/* Кнопки "Скачать" и "Закрыть" */}
           <div className='mt-8 flex justify-between'>
             <Button
               onClick={handleDownload}

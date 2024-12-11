@@ -93,5 +93,15 @@ export const repository = () => {
         throw error; // Генерация ошибки для обработки в компоненте
       }
     },
+
+    async getLastCertificate() {
+      try {
+        const response = await instance.get(`/reference/active/`);
+        return response.data;
+      } catch (error) {
+        console.error('Ошибка при получении данных студента:', error);
+        throw error;
+      }
+    },
   };
 };

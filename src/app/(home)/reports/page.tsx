@@ -1,49 +1,82 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Certificate } from './components/certificate';
 import html2pdf from 'html2pdf.js';
 import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/navigation'; // Импортируем useRouter для роутинга
+import { useRouter } from 'next/navigation';
+import { repository } from '@/lib/api'; // Импорт вашего репозитория
 
 export default function Page() {
   const certificateRef = useRef(null);
-  const router = useRouter(); // Инициализация useRouter
+  const router = useRouter();
+  const [certificateData, setCertificateData] = useState(null);
 
-  // Функция для скачивания сертификата
+  useEffect(() => {
+    const fetchCertificateData = async () => {
+      const repo = repository();
+      try {
+        const data = await repo.getLastCertificate(); // Укажите правильный studentId
+        // Проверяем, если сервер не возвращает обязательные данные
+        if (data && data.student_name && data.student_group && data.created_at && data.cl) {
+          setCertificateData(data);
+        } else {
+          setCertificateData(null);
+        }
+      } catch (error) {
+        console.error('Ошибка при получении данных сертификата:', error);
+        setCertificateData(null);
+      }
+    };
+
+    fetchCertificateData();
+  }, []);
+
   const handleDownload = () => {
     const element = certificateRef.current;
 
-    // Настройки для html2pdf.js
     const options = {
-      filename: 'certificate.pdf', // Имя файла
+      filename: 'certificate.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, useCORS: true },
       jsPDF: {
         unit: 'mm',
-        format: [297, 199], // Альбомный формат A4 (ширина 297 мм, высота 210 мм)
-        orientation: 'landscape', // Альбомный формат
+        format: [297, 199],
+        orientation: 'landscape',
       },
     };
 
-    html2pdf().from(element).set(options).save(); // Конвертировать и скачать PDF
+    html2pdf().from(element).set(options).save();
   };
 
-  // Функция для перехода на страницу теста
   const handleRedirect = () => {
-    router.push('/competencies'); // Указываем путь страницы теста
+    router.push('/competencies');
   };
 
   return (
     <div className='pb-10 h-full w-full flex flex-col justify-center items-center gap-10'>
-      <div ref={certificateRef}>
-        <Certificate />
-      </div>
-      {/* Кнопка "Пройти тест" */}
-      <p>Чтобы получить сертификат нужно пройти тест!!!</p>
-      <Button onClick={handleRedirect} className='bg-green-600'>
-        Пройти тест
-      </Button>
+      {certificateData ? (
+        <>
+          <div ref={certificateRef}>
+            <Certificate
+              studentName={certificateData.student_name}
+              studentGroup={certificateData.student_group}
+              createdAt={certificateData.created_at}
+              cl={certificateData.cl}
+            />
+          </div>
+          <Button onClick={handleDownload} className='bg-blue-600'>
+            Скачать сертификат
+          </Button>
+        </>
+      ) : (
+        <>
+          <p>Чтобы получить сертификат нужно пройти тест!!!</p>
+          <Button onClick={handleRedirect} className='bg-green-600'>
+            Пройти тест
+          </Button>
+        </>
+      )}
     </div>
   );
 }
