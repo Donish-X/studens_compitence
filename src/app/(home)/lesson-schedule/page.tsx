@@ -184,41 +184,15 @@ const schedulers = [
 ];
 
 export default function Page() {
-  const dateOptions: Intl.DateTimeFormatOptions = {
-    day: 'numeric',
-    month: 'short',
-  };
-
-  // const [subjects, setSubjects] = useState<Subject[]>([]);
-  // const [schedulers, setSchedulers] = useState<{}>();
-
-  // const useRepository = repository();
-
-  // useEffect(() => {
-  //     const fetchData = async () => {
-  //         try {
-  //             const response = await useRepository.getSubjects();
-  //             setSubjects(response);
-  //         } catch (error) {
-  //             console.error('Error fetching subjects', error);
-  //         }
-  //     };
-  //     fetchData();
-  //     console.info('blet');
-  // }, []);
-
   return (
     <div className='px-10 pt-4 h-full w-full'>
       <div className='2xl:grid-cols-3 md:grid-cols-1 lg:grid-cols-2 grid gap-y-20'>
-        {schedulers.map((scheduler, index) => {
+        {schedulers.map((scheduler) => {
           return (
             <SchedulerCard
               className='justify-self-center self-center'
               key={scheduler.dayOfWeek}
               scheduler={scheduler}
-              date={new Intl.DateTimeFormat('ru-RU', dateOptions).format(
-                new Date(Date.now() + index * 86400000),
-              )}
             />
           );
         })}

@@ -20,7 +20,7 @@ type SchedulerCardProps = CardProps & {
   date: string;
 };
 
-export function SchedulerCard({ scheduler, date, className, ...props }: SchedulerCardProps) {
+export function SchedulerCard({ scheduler, className, ...props }: SchedulerCardProps) {
   return (
     <Card className={cn('w-auto h-auto', className)} {...props}>
       <CardHeader className='py-4'>
@@ -29,7 +29,6 @@ export function SchedulerCard({ scheduler, date, className, ...props }: Schedule
           <div className='text-center'>
             <span className='block text-sm text-gray-500'>{scheduler.teacher}</span>
           </div>
-          <span>{date}</span>
         </CardTitle>
       </CardHeader>
       <Separator />

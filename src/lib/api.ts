@@ -3,6 +3,7 @@
 import axios from 'axios';
 import { SignIn, Tokens } from './type';
 import { getCookie, setCookie } from 'cookies-next/client';
+import { string } from 'zod';
 
 const instance = axios.create({
   baseURL: 'https://api-diplom.build-brain.uz',
@@ -50,6 +51,7 @@ export const repository = () => {
         console.error(error);
       }
     },
+
     async getSchedule() {
       try {
         const response = await instance.get('/schedule/');
@@ -101,6 +103,20 @@ export const repository = () => {
       } catch (error) {
         console.error('Ошибка при получении данных студента:', error);
         throw error;
+      }
+    },
+
+    async getStudentData(studentId: string | null) {
+      try {
+        if (!studentId) {
+          throw new Error('Student ID is required');
+        }
+
+        const response = await instance.get(`/student/${studentId}/gpa/`);
+        return response.data;
+      } catch (error) {
+        console.error('Ошибка при получении данных студента:', error);
+        throw error; // Генерация ошибки для обработки в компоненте
       }
     },
   };

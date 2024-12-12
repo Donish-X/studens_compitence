@@ -32,7 +32,7 @@ export function LoginForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     await signin(values);
-    router.push('/');
+    router.push('/electronic-journal');
   }
 
   return (
