@@ -31,7 +31,7 @@ export const DropdownSubjects = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [useRepository]); // Добавили useRepository в зависимости
 
   async function selectValue(value: string) {
     const selected = subjects.find((subject) => subject.name === value);

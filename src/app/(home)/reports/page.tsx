@@ -2,10 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Certificate } from './components/certificate';
-import html2pdf from 'html2pdf.js';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { repository } from '@/lib/api'; // Импорт вашего репозитория
+
+// Dynamically import html2pdf to avoid server-side issues
+import dynamic from 'next/dynamic';
+const html2pdf = dynamic(() => import('html2pdf.js'), { ssr: false });
 
 export default function Page() {
   const certificateRef = useRef(null);
@@ -38,7 +41,12 @@ export default function Page() {
     const options = {
       filename: 'certificate.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: true, // Включаем логирование для диагностики
+        allowTaint: true, // Разрешаем утечку (если изображения на другом домене)
+      },
       jsPDF: {
         unit: 'mm',
         format: [297, 199],
@@ -46,7 +54,9 @@ export default function Page() {
       },
     };
 
-    html2pdf().from(element).set(options).save();
+    if (html2pdf && element) {
+      html2pdf().from(element).set(options).save();
+    }
   };
 
   const handleRedirect = () => {

@@ -1,18 +1,18 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Label } from '@/components/ui/label';
-import html2pdf from 'html2pdf.js';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { repository } from '@/lib/api';
 import { Question } from '@/lib/type';
 import axios from 'axios';
 import { Certificate } from '../reports/components/certificate'; // Импортируем Certificate
 
-import { useEffect, useState } from 'react';
+// Dynamically import html2pdf to avoid server-side issues
+import dynamic from 'next/dynamic';
+const html2pdf = dynamic(() => import('html2pdf.js'), { ssr: false });
 
-// Компонент модального окна
 const Modal = ({
   children,
   isOpen,
@@ -62,13 +62,13 @@ export default function Page() {
     }
 
     async function fetchStudentId() {
-      const response = await useRepository.getUser(); // Предполагается метод в API
+      const response = await useRepository.getUser();
       setStudentId(response.student);
     }
 
     fetchQuestions();
     fetchStudentId();
-  }, []);
+  }, [useRepository]); // Добавляем useRepository
 
   const handleAnswerChange = (questionId: number, value: string) => {
     setAnswers((prev) => ({
@@ -145,7 +145,9 @@ export default function Page() {
       },
     };
 
-    html2pdf().from(element).set(options).save(); // Конвертировать и скачать PDF
+    if (html2pdf) {
+      html2pdf().from(element).set(options).save(); // Конвертировать и скачать PDF
+    }
   };
 
   const allAnswered = questions.every((question) => answers[question.id] !== undefined);
