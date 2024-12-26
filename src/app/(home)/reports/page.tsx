@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Certificate } from './components/certificate';
-import html2pdf from 'html2pdf.js';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { repository } from '@/lib/api'; // Импорт вашего репозитория
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 export default function Page() {
   const certificateRef = useRef(null);
@@ -32,13 +33,18 @@ export default function Page() {
     fetchCertificateData();
   }, []);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     const element = certificateRef.current;
 
     const options = {
       filename: 'certificate.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: true, // Включаем логирование для диагностики
+        allowTaint: true, // Разрешаем утечку (если изображения на другом домене)
+      },
       jsPDF: {
         unit: 'mm',
         format: [297, 199],
@@ -46,7 +52,13 @@ export default function Page() {
       },
     };
 
-    html2pdf().from(element).set(options).save();
+    if (element) {
+      const canvas = await html2canvas(element, options.html2canvas);
+      const imgData = canvas.toDataURL('image/jpeg');
+      const pdf = new jsPDF(options.jsPDF.orientation, options.jsPDF.unit, options.jsPDF.format);
+      pdf.addImage(imgData, 'JPEG', 0, 0, options.jsPDF.format[0], options.jsPDF.format[1]);
+      pdf.save(options.filename);
+    }
   };
 
   const handleRedirect = () => {
