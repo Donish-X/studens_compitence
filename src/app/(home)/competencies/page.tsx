@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { repository } from '@/lib/api';
@@ -64,6 +65,7 @@ export default function Page() {
     }
 
     async function fetchStudentId() {
+      const response = await useRepository.getUser();
       const response = await useRepository.getUser();
       setStudentId(response.student);
     }

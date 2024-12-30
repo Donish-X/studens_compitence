@@ -45,6 +45,12 @@ export default function Page() {
         logging: true, // Включаем логирование для диагностики
         allowTaint: true, // Разрешаем утечку (если изображения на другом домене)
       },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: true, // Включаем логирование для диагностики
+        allowTaint: true, // Разрешаем утечку (если изображения на другом домене)
+      },
       jsPDF: {
         unit: 'mm',
         format: [297, 199],
